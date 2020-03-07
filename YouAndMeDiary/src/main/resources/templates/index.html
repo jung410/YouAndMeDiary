@@ -3,21 +3,22 @@
 <head th:replace="fragments/header :: header">
     <title>Index</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/css/dragula.min.css">
+    <!-- END: Vendor CSS-->
 </head>
 <style>
-    .total-container{
-        min-height: 1000px;
-    }
-
-    .left-container{
+    .left-container {
         background: skyblue;
     }
 
-    .right-container{
+    .right-container {
         background: lightpink;
     }
 </style>
-<body>
+<body class="vertical-layout vertical-menu 2-columns   fixed-navbar">
 
 <div th:replace="fragments/bodyHeader :: bodyHeader"/>
 
@@ -28,16 +29,7 @@
 
     <div class="right-container col-sm-9">
         <section id="drag-area">
-            <div class="row">
-                <div class="col-12 mt-1 mb-3">
-                    <h4 class="text-uppercase">Basic Draggable Cards</h4>
-                    <hr>
-                </div>
-            </div>
-
             <div class="row" id="card-drag-area">
-
-
                 <div class="col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-header">
@@ -51,7 +43,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card-content collapse show">
+                        <div class="card-content collapse show" style="">
                             <div class="card-body">
                                 <h4 class="card-title">Content title</h4>
                                 <p class="card-text">Jelly beans sugar plum cheesecake cookie oat cake soufflé.Tootsie roll bonbon liquorice tiramisu pie powder.Donut sweet roll marzipan pastry cookie cake tootsie roll oat cake cookie.</p>
@@ -72,7 +64,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="card-content collapse show">
+                    <div class="card-content collapse show" style="">
                         <div class="card-body">
                             <h4 class="card-title">Content title</h4>
                             <p class="card-text">Jelly beans sugar plum cheesecake cookie oat cake soufflé.Tootsie roll bonbon liquorice tiramisu pie powder.Donut sweet roll marzipan pastry cookie cake tootsie roll oat cake cookie.</p>
@@ -101,81 +93,41 @@
                         </div>
                     </div>
                 </div>
-            </div><div class="col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Card Heading 4</h4>
-                        <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
-                        <div class="heading-elements">
-                            <ul class="list-inline mb-0">
-                                <li><a data-action="collapse"><i class="feather icon-minus"></i></a></li>
-                                <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
-                                <li><a data-action="close"><i class="feather icon-x"></i></a></li>
-                            </ul>
+            </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Card Heading 4</h4>
+                            <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="collapse"><i class="feather icon-minus"></i></a></li>
+                                    <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+                                    <li><a data-action="close"><i class="feather icon-x"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-content collapse show">
-                        <div class="card-body">
-                            <h4 class="card-title">Content title</h4>
-                            <p class="card-text">Jelly beans sugar plum cheesecake cookie oat cake soufflé.Tootsie roll bonbon liquorice tiramisu pie powder.Donut sweet roll marzipan pastry cookie cake tootsie roll oat cake cookie.</p>
-                            <p class="card-text">Sweet roll marzipan pastry halvah. Cake bear claw sweet. Tootsie roll pie marshmallow lollipop chupa chups donut fruitcake cake.</p>
+                        <div class="card-content collapse show">
+                            <div class="card-body">
+                                <h4 class="card-title">Content title</h4>
+                                <p class="card-text">Jelly beans sugar plum cheesecake cookie oat cake soufflé.Tootsie roll bonbon liquorice tiramisu pie powder.Donut sweet roll marzipan pastry cookie cake tootsie roll oat cake cookie.</p>
+                                <p class="card-text">Sweet roll marzipan pastry halvah. Cake bear claw sweet. Tootsie roll pie marshmallow lollipop chupa chups donut fruitcake cake.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
         </section>
+        <!-- // Card drag area section end -->
     </div> <!-- /container -->
 </div>
-<script src='../js/dragula.js'></script>
+<script src="/static/js/dragula.min.js"></script>
 <script>
-    /*=========================================================================================
-        File Name: drag-drop.js
-        Description: drag & drop elements using dragula js
-        --------------------------------------------------------------------------------------
-        Item Name: Stack - Responsive Admin Theme
-        Author: Pixinvent
-        Author URL: hhttp://www.themeforest.net/user/pixinvent
-    ==========================================================================================*/
-
-
     $(document).ready(function(){
         // Draggable Cards
         dragula([document.getElementById('card-drag-area')]);
-
-        // Change Card color if moved
-        dragula([document.getElementById('card-move')])
-            .on('drag', function (el) {
-                el.className = el.className.replace('card-moved', '');
-            }).on('drop', function (el) {
-            el.className += ' card-moved';
-        }).on('over', function (el, container) {
-            container.className += ' card-over';
-        }).on('out', function (el, container) {
-            container.className = container.className.replace('card-over', '');
-        });
-
-        // Copy Cards
-        dragula([document.getElementById("copy-left"), document.getElementById("copy-right")], {
-            copy: true
-        });
-
-        // Drag Handles
-        dragula([document.getElementById("left-handles"), document.getElementById("right-handles")], {
-            moves: function (el, container, handle) {
-                return handle.classList.contains('handle');
-            }
-        });
-
-        // Drag Title Handles
-        dragula([document.getElementById("left-titleHandles"), document.getElementById("right-titleHandles")], {
-            moves: function (el, container, handle) {
-                return handle.classList.contains('titleArea');
-            }
-        });
-
     });
-
 </script>
 
 <div th:replace="fragments/footer :: footer"/>
