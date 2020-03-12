@@ -11,83 +11,400 @@
 
 <div th:replace="fragments/bodyMainMenu :: bodyMainMenu"/>
 
+
+<!-- BEGIN: Content-->
 <div class="app-content content">
     <div class="content-overlay"></div>
     <div class="content-wrapper">
-        <section id="drag-area">
-            <div class="row" id="card-drag-area">
-                <div class="col-xl-4 col-md-12">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <!-- Stats -->
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">2020년 3월 11일</h4>
-                        </div>
                         <div class="card-content">
-                            <div class="card-body">
-                                <h5 class="card-title">오늘의 일기</h5>
-                            </div>
-                            <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-example" data-slide-to="1"></li>
-                                    <li data-target="#carousel-example" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="carousel-item active">
-                                        <img src="/static/app-assets/images/carousel/08.jpg" class="d-block w-100"
-                                             alt="First slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="/static/app-assets/images/carousel/03.jpg" class="d-block w-100"
-                                             alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="/static/app-assets/images/carousel/01.jpg" class="d-block w-100"
-                                             alt="Third slide">
-                                    </div>
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-primary bg-darken-2">
+                                    <i class="icon-camera font-large-2 white"></i>
                                 </div>
-                                <a class="left carousel-control" href="#carousel-example" role="button"
-                                   data-slide="prev">
-                                    <span class="icon-prev" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example" role="button"
-                                   data-slide="next">
-                                    <span class="icon-next" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    즐거운 하루였다.
-                                    즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.
-                                    즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.
-                                    즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.
-                                    즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.즐거운 하루였다.
-                                </p>
-                                <a href="#" class="card-link">상세보기</a>
-                                <a href="#" class="card-link">방문한 곳 사이트</a>
+                                <div class="p-2 bg-gradient-x-primary white media-body">
+                                    <h5>등록사진수</h5>
+                                    <h5 class="text-bold-400 mb-0"><i class="feather icon-plus"></i> 28</h5>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
-                            <span class="float-left">방금 전</span>
-                            <span class="tags float-right">
-                                        <span class="badge badge-pill badge-primary">데이트</span>
-                                        <span class="badge badge-pill badge-danger">영화관</span>
-                                    </span>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-danger bg-darken-2">
+                                    <i class="icon-book-open font-large-2 white"></i>
+                                </div>
+                                <div class="p-2 bg-gradient-x-danger white media-body">
+                                    <h5>등록일기수</h5>
+                                    <h5 class="text-bold-400 mb-0"><i class="feather icon-arrow-up"></i> 1,238</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-warning bg-darken-2">
+                                    <i class="icon-map font-large-2 white"></i>
+                                </div>
+                                <div class="p-2 bg-gradient-x-warning white media-body">
+                                    <h5>방문지</h5>
+                                    <h5 class="text-bold-400 mb-0"><i class="feather icon-arrow-up"></i> 45</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-success bg-darken-2">
+                                    <i class="icon-wallet font-large-2 white"></i>
+                                </div>
+                                <div class="p-2 bg-gradient-x-success white media-body">
+                                    <h5>지출액</h5>
+                                    <h5 class="text-bold-400 mb-0"><i class="feather icon-arrow-up"></i> 2,421,200 &#8361</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <!--/ Stats -->
+            <!--Product sale & buyers -->
+            <div class="row match-height">
+                <div class="col-xl-8 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">연간 작성 일기</h4>
+                            <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+                                    <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div id="products-sales" class="height-300"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">최근 작성 글(최대 5개)</h4>
+                            <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content px-1">
+                            <div id="recent-buyers" class="media-list height-300 position-relative">
+                                <a href="#" class="media border-0">
+                                    <div class="media-left pr-1">
+                                        <div class="avatar avatar-online avatar-md"><img class="media-object rounded-circle" src="/static/app-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body w-100">
+                                        <h6 class="list-group-item-heading">여행갔다 왔어용</h6>
+                                        <p class="list-group-item-text mb-0">
+                                            <span class="badge badge-primary">여행</span>
+                                            <span class="badge badge-warning ml-1">1박2일</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media border-0">
+                                    <div class="media-left pr-1">
+                                        <div class="avatar avatar-away avatar-md"><img class="media-object rounded-circle" src="/static/app-assets/images/portrait/small/avatar-s-8.png" alt="Generic placeholder image">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body w-100">
+                                        <h6 class="list-group-item-heading">여행갔다 왔어용</h6>
+                                        <p class="list-group-item-text mb-0">
+                                            <span class="badge badge-primary">여행</span>
+                                            <span class="badge badge-warning ml-1">1박2일</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media border-0">
+                                    <div class="media-left pr-1">
+                                        <div class="avatar avatar-busy avatar-md"><img class="media-object rounded-circle" src="/static/app-assets/images/portrait/small/avatar-s-9.png" alt="Generic placeholder image">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body w-100">
+                                        <h6 class="list-group-item-heading">여행갔다 왔어용</h6>
+                                        <p class="list-group-item-text mb-0">
+                                            <span class="badge badge-primary">여행</span>
+                                            <span class="badge badge-warning ml-1">1박2일</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media border-0">
+                                    <div class="media-left pr-1">
+                                        <div class="avatar avatar-online avatar-md"><img class="media-object rounded-circle" src="/static/app-assets/images/portrait/small/avatar-s-10.png" alt="Generic placeholder image">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body w-100">
+                                        <h6 class="list-group-item-heading">여행갔다 왔어용</h6>
+                                        <p class="list-group-item-text mb-0">
+                                            <span class="badge badge-primary">여행</span>
+                                            <span class="badge badge-warning ml-1">1박2일</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media border-0">
+                                    <div class="media-left pr-1">
+                                        <div class="avatar avatar-online avatar-md"><img class="media-object rounded-circle" src="/static/app-assets/images/portrait/small/avatar-s-11.png" alt="Generic placeholder image">
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body w-100">
+                                        <h6 class="list-group-item-heading">여행갔다 왔어용</h6>
+                                        <p class="list-group-item-text mb-0">
+                                            <span class="badge badge-primary">여행</span>
+                                            <span class="badge badge-warning ml-1">1박2일</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ Product sale & buyers -->
+            <!-- Social & Weather -->
+            <div class="row match-height">
+                <div class="col-xl-4 col-lg-12">
+                    <div class="card bg-gradient-x-danger">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="weather-details text-center">
+                                    <span class="block white darken-1">흐림</span>
+                                    <span class="font-large-2 block white darken-4">13&deg;</span>
+                                    <span class="font-medium-4 text-bold-500 white darken-1">서울, 한국</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-gradient-x-danger border-0">
+                                <div class="row">
+                                    <div class="col-4 text-center display-table-cell white">
+                                        <i class="me-wind font-large-1 lighten-3 align-middle"></i> <span class="align-middle">2m/s</span>
+                                    </div>
+                                    <div class="col-4 text-center display-table-cell white">
+                                        <i class="me-sun2 font-large-1 lighten-3 align-middle"></i> <span class="align-middle">2%</span>
+                                    </div>
+                                    <div class="col-4 text-center display-table-cell white">
+                                        <i class="me-thermometer font-large-1 lighten-3 align-middle"></i> <span class="align-middle">13.0&deg;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-8 col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">타임라인</h4>
+                            <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <section class="cd-horizontal-timeline">
+                                        <div class="timeline">
+                                            <div class="events-wrapper">
+                                                <div class="events">
+                                                    <ol>
+                                                        <li><a href="#0" data-date="16/01/2015" class="selected">16 Jan</a></li>
+                                                        <li><a href="#0" data-date="28/02/2015">28 Feb</a></li>
+                                                        <li><a href="#0" data-date="20/04/2015">20 Mar</a></li>
+                                                        <li><a href="#0" data-date="20/05/2015">20 May</a></li>
+                                                        <li><a href="#0" data-date="09/07/2015">09 Jul</a></li>
+                                                        <li><a href="#0" data-date="30/08/2015">30 Aug</a></li>
+                                                        <li><a href="#0" data-date="15/09/2015">15 Sep</a></li>
+                                                    </ol>
+                                                    <span class="filling-line" aria-hidden="true"></span>
+                                                </div>
+                                                <!-- .events -->
+                                            </div>
+                                            <!-- .events-wrapper -->
+                                            <ul class="cd-timeline-navigation">
+                                                <li><a href="#0" class="prev inactive">Prev</a></li>
+                                                <li><a href="#0" class="next">Next</a></li>
+                                            </ul>
+                                            <!-- .cd-timeline-navigation -->
+                                        </div>
+                                        <!-- .timeline -->
+                                        <div class="events-content">
+                                            <ol>
+                                                <li class="selected" data-date="16/01/2015">
+                                                    <blockquote class="blockquote border-0">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img class="media-object img-xl mr-1" src="/static/app-assets/images/portrait/small/avatar-s-5.png" alt="Generic placeholder image">
+                                                            </div>
+                                                            <div class="media-body">
+                                                                Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                                            </div>
+                                                        </div>
+                                                        <footer class="blockquote-footer text-right">Steve Jobs
+                                                            <cite title="Source Title">Entrepreneur</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                    <p class="lead mt-2">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                                    </p>
+                                                </li>
+                                                <li data-date="28/02/2015">
+                                                    <blockquote class="blockquote border-0">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img class="media-object img-xl mr-1" src="/static/app-assets/images/portrait/small/avatar-s-6.png" alt="Generic placeholder image">
+                                                            </div>
+                                                            <div class="media-body">
+                                                                Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                                            </div>
+                                                        </div>
+                                                        <footer class="blockquote-footer text-right">Steve Jobs
+                                                            <cite title="Source Title">Entrepreneur</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                    <p class="lead mt-2">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                                    </p>
+                                                </li>
+                                                <li data-date="20/04/2015">
+                                                    <blockquote class="blockquote border-0">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img class="media-object img-xl mr-1" src="/static/app-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                                            </div>
+                                                            <div class="media-body">
+                                                                Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                                            </div>
+                                                        </div>
+                                                        <footer class="blockquote-footer text-right">Steve Jobs
+                                                            <cite title="Source Title">Entrepreneur</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                    <p class="lead mt-2">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                                    </p>
+                                                </li>
+                                                <li data-date="20/05/2015">
+                                                    <blockquote class="blockquote border-0">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img class="media-object img-xl mr-1" src="/static/app-assets/images/portrait/small/avatar-s-8.png" alt="Generic placeholder image">
+                                                            </div>
+                                                            <div class="media-body">
+                                                                Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                                            </div>
+                                                        </div>
+                                                        <footer class="blockquote-footer text-right">Steve Jobs
+                                                            <cite title="Source Title">Entrepreneur</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                    <p class="lead mt-2">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                                    </p>
+                                                </li>
+                                                <li data-date="09/07/2015">
+                                                    <blockquote class="blockquote border-0">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img class="media-object img-xl mr-1" src="/static/app-assets/images/portrait/small/avatar-s-9.png" alt="Generic placeholder image">
+                                                            </div>
+                                                            <div class="media-body">
+                                                                Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                                            </div>
+                                                        </div>
+                                                        <footer class="blockquote-footer text-right">Steve Jobs
+                                                            <cite title="Source Title">Entrepreneur</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                    <p class="lead mt-2">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                                    </p>
+                                                </li>
+                                                <li data-date="30/08/2015">
+                                                    <blockquote class="blockquote border-0">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img class="media-object img-xl mr-1" src="/static/app-assets/images/portrait/small/avatar-s-6.png" alt="Generic placeholder image">
+                                                            </div>
+                                                            <div class="media-body">
+                                                                Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                                            </div>
+                                                        </div>
+                                                        <footer class="blockquote-footer text-right">Steve Jobs
+                                                            <cite title="Source Title">Entrepreneur</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                    <p class="lead mt-2">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                                    </p>
+                                                </li>
+                                                <li data-date="15/09/2015">
+                                                    <blockquote class="blockquote border-0">
+                                                        <div class="media">
+                                                            <div class="media-left">
+                                                                <img class="media-object img-xl mr-1" src="/static/app-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                                            </div>
+                                                            <div class="media-body">
+                                                                Sometimes life is going to hit you in the head with a brick. Don't lose faith.
+                                                            </div>
+                                                        </div>
+                                                        <footer class="blockquote-footer text-right">Steve Jobs
+                                                            <cite title="Source Title">Entrepreneur</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                    <p class="lead mt-2">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <!-- .events-content -->
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ Social & Weather -->
+        </div>
     </div>
 </div>
-<!--<script src="/static/vendors/js/extensions/dragula.min.js"></script>-->
-<!--<script>-->
-<!--    $(document).ready(function () {-->
-<!--        // Draggable Cards-->
-<!--        dragula([document.getElementById('card-drag-area')]);-->
-<!--    });-->
-<!--</script>-->
+<!-- END: Content-->
+
 
 <div th:replace="fragments/footer :: footer"/>
 
@@ -99,18 +416,19 @@
 <!-- BEGIN Vendor JS-->
 
 <!-- BEGIN: Page Vendor JS-->
-<script src="/static/app-assets/vendors/js/ui/jquery.sticky.js"></script>
-<script src="/static/app-assets/vendors/js/charts/jquery.sparkline.min.js"></script>
+<script src="/static/app-assets/vendors/js/charts/raphael-min.js"></script>
+<script src="/static/app-assets/vendors/js/charts/morris.min.js"></script>
+<script src="/static/app-assets/vendors/js/extensions/unslider-min.js"></script>
+<script src="/static/app-assets/vendors/js/timeline/horizontal-timeline.js"></script>
 <!-- END: Page Vendor JS-->
 
 <!-- BEGIN: Theme JS-->
 <script src="/static/app-assets/js/core/app-menu.js"></script>
 <script src="/static/app-assets/js/core/app.js"></script>
-<script src="/static/app-assets/js/scripts/customizer.js"></script>
 <!-- END: Theme JS-->
 
 <!-- BEGIN: Page JS-->
-<script src="/static/app-assets/js/scripts/ui/breadcrumbs-with-stats.js"></script>
+<script src="/static/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
 <!-- END: Page JS-->
 </body>
 </html>

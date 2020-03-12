@@ -267,7 +267,7 @@ footer.footer-dark {
           padding-left: 68px; }
         .main-menu.menu-light .navigation > li.hover > a, .main-menu.menu-light .navigation > li:hover > a, .main-menu.menu-light .navigation > li.active > a {
           color: #2c3648;
-          background-color: whitesmoke; }
+          /*background-color: whitesmoke;*/ }
           .main-menu.menu-light .navigation > li.hover > a.mm-next, .main-menu.menu-light .navigation > li:hover > a.mm-next, .main-menu.menu-light .navigation > li.active > a.mm-next {
             background-color: inherit; }
         .main-menu.menu-light .navigation > li.active > a {

@@ -7,7 +7,7 @@
             <div class="navbar-header">
                 <ul class="nav navbar-nav flex-row">
                     <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="feather icon-menu font-large-1"></i></a></li>
-                    <li class="nav-item"><a class="navbar-brand" href="/"><img class="brand-logo" alt="stack admin logo" src="/static/app-assets/images/logo/logo32x27.png">
+                    <li class="nav-item"><a class="navbar-brand" href="/dashboard"><img class="brand-logo" alt="stack admin logo" src="/static/app-assets/images/logo/logo32x27.png">
                         <h2 class="brand-text">0426</h2><h6 class="brand-text">U&ME Diary</h6>
                     </a></li>
                     <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
@@ -25,7 +25,7 @@
                                 <span class="user-name">김민정</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#"><i class="feather icon-user"></i>프로필 수정</a>
+                                <a class="dropdown-item" href="/member/setting"><i class="feather icon-user"></i>프로필 수정</a>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="feather icon-power"></i> Logout</a>
                             </div>
                         </li>
@@ -34,5 +34,32 @@
             </div>
         </div>
     </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="row">
+                            <label for="email" class="mr-sm-2">Email address:</label>
+                            <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Enter email" id="email">
+                        </div>
+                        <div class="row">
+                            <label for="pwd" class="mr-sm-2">Password:</label>
+                            <input type="password" class="form-control mb-2 mr-sm-2" placeholder="Enter password" id="pwd">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- END: Header-->
 </div>
