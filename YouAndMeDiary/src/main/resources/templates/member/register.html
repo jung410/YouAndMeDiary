@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
 
 <head>
@@ -9,12 +9,7 @@
     <meta name="description" content="Stack admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Login with Background Image - Stack Responsive Bootstrap 4 Admin Template</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="/static/app-assets/js/core/libraries/bootstrap.min.js"></script>
-    <script src="/static/app-assets/js/core/libraries/jquery.min.js"></script>
+    <title>Register with Background Color - Stack Responsive Bootstrap 4 Admin Template</title>
 
     <link rel="apple-touch-icon" href="/static/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="/static/app-assets/images/ico/favicon.ico">
@@ -60,49 +55,42 @@
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <div class="col-lg-4 col-md-8 col-10 box-shadow-2 p-0">
                         <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
-                            <div class="card-header border-0">
+                            <div class="card-header border-0 pb-0">
                                 <div class="card-title text-center">
                                     <img src="/static/app-assets/images/logo/logo.png" alt="branding logo">
                                 </div>
-                                <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>간편 로그인</span></h6>
                             </div>
                             <div class="card-content">
-                                <div class="text-center">
-                                    <a href="javascript:alert('준비중입니다. 죄송합니다.');" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="fa fa-facebook"></span></a>
-                                    <a href="javascript:alert('준비중입니다. 죄송합니다.');" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="fa fa-twitter"></span></a>
-                                    <a href="javascript:alert('준비중입니다. 죄송합니다.');" class="btn btn-social-icon mr-1 mb-1 btn-outline-linkedin"><span class="fa fa-linkedin font-medium-4"></span></a>
-                                    <a href="javascript:alert('준비중입니다. 죄송합니다.');" class="btn btn-social-icon mr-1 mb-1 btn-outline-github"><span class="fa fa-github font-medium-4"></span></a>
-                                </div>
-                                <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1"><span>로그인</span></p>
+                                <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1"><span>회원가입</span></p>
                                 <div class="card-body">
-                                    <form class="form-horizontal" method="get" action="/dashboard" novalidate>
+                                    <form class="form-horizontal" action="/member/register" method="POST" th:object="${member}" novalidate>
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="text" class="form-control" id="user-name" placeholder="아이디" required>
+                                            <input type="text" class="form-control" id="user-id" th:field="*{userId}" placeholder="아이디를 입력하세요" required>
                                             <div class="form-control-position">
                                                 <i class="feather icon-user"></i>
                                             </div>
                                         </fieldset>
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="password" class="form-control" id="user-password" placeholder="비밀번호" required>
+                                            <input type="text" class="form-control" id="user-name" th:field="*{userName}" placeholder="이름을 입력하세요" required>
+                                            <div class="form-control-position">
+                                                <i class="feather icon-user"></i>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-group position-relative has-icon-left">
+                                            <input type="email" class="form-control" id="user-email" th:field="*{userEmail}" placeholder="이메일을 입력하세요" required>
+                                            <div class="form-control-position">
+                                                <i class="feather icon-mail"></i>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-group position-relative has-icon-left">
+                                            <input type="password" class="form-control" id="user-password" th:field="*{userPassword}" placeholder="비밀번호를 입력하세요" required>
                                             <div class="form-control-position">
                                                 <i class="fa fa-key"></i>
                                             </div>
                                         </fieldset>
-                                        <div class="form-group row">
-                                            <div class="col-sm-6 col-12 text-center text-sm-left pr-0">
-                                                <fieldset>
-                                                    <input type="checkbox" id="remember-me" class="chk-remember">
-                                                    <label for="remember-me"> Remember Me</label>
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-sm-6 col-12 float-sm-left text-center text-sm-right"><a href="recover-password.html" class="card-link">비밀번호를 잃어버렸나요?</a></div>
-                                        </div>
-                                        <button type="submit" class="btn btn-outline-primary btn-block"><i class="feather icon-unlock"></i> 로그인</button>
+                                        <button type="submit" class="btn btn-outline-primary btn-block"><i class="feather icon-user"></i> 회원가입</button>
                                     </form>
-                                </div>
-                                <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1"><span>아직 회원이 아닌가요?</span></p>
-                                <div class="card-body">
-                                    <a href="/member/register" class="btn btn-outline-danger btn-block"><i class="feather icon-user"></i> 회원가입</a>
+                                    <a href="/member/login" class="btn btn-outline-danger btn-block mt-2"><i class="feather icon-unlock"></i> 로그인</a>
                                 </div>
                             </div>
                         </div>

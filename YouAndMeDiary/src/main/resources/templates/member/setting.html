@@ -25,19 +25,13 @@
                             <li class="nav-item">
                                 <a class="nav-link d-flex active" id="account-pill-general" data-toggle="pill" href="#account-vertical-general" aria-expanded="true">
                                     <i class="feather icon-globe"></i>
-                                    General
+                                    기본설정
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex" id="account-pill-password" data-toggle="pill" href="#account-vertical-password" aria-expanded="false">
                                     <i class="feather icon-lock"></i>
-                                    Change Password
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex" id="account-pill-info" data-toggle="pill" href="#account-vertical-info" aria-expanded="false">
-                                    <i class="feather icon-info"></i>
-                                    Info
+                                    비밀번호 변경
                                 </a>
                             </li>
                         </ul>
@@ -55,13 +49,11 @@
                                                 </a>
                                                 <div class="media-body mt-75">
                                                     <div class="col-12 px-0 d-flex flex-sm-row flex-column justify-content-start">
-                                                        <label class="btn btn-sm btn-primary ml-50 mb-50 mb-sm-0 cursor-pointer" for="account-upload">Upload new photo</label>
+                                                        <label class="btn btn-sm btn-primary ml-50 mb-50 mb-sm-0 cursor-pointer" for="account-upload">새 이미지 등록</label>
                                                         <input type="file" id="account-upload" hidden>
-                                                        <button class="btn btn-sm btn-secondary ml-50">Reset</button>
+                                                        <button class="btn btn-sm btn-secondary ml-50">초기화</button>
                                                     </div>
-                                                    <p class="text-muted ml-75 mt-50"><small>Allowed JPG, GIF or PNG. Max
-                                                        size of
-                                                        800kB</small></p>
+                                                    <p class="text-muted ml-75 mt-50"><small>최대 사이즈 800KB의 JPG, GIF, PNG 파일만 가능합니다</small></p>
                                                 </div>
                                             </div>
                                             <hr>
@@ -70,7 +62,7 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <div class="controls">
-                                                                <label for="account-username">Username</label>
+                                                                <label for="account-username">아이디</label>
                                                                 <input type="text" class="form-control" id="account-username" placeholder="Username" value="hermione007" required data-validation-required-message="This username field is required">
                                                             </div>
                                                         </div>
@@ -78,7 +70,7 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <div class="controls">
-                                                                <label for="account-name">Name</label>
+                                                                <label for="account-name">이름</label>
                                                                 <input type="text" class="form-control" id="account-name" placeholder="Name" value="Hermione Granger" required data-validation-required-message="This name field is required">
                                                             </div>
                                                         </div>
@@ -86,32 +78,20 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <div class="controls">
-                                                                <label for="account-e-mail">E-mail</label>
+                                                                <label for="account-e-mail">이메일</label>
                                                                 <input type="email" class="form-control" id="account-e-mail" placeholder="Email" value="granger007@hogward.com" required data-validation-required-message="This email field is required">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
-                                                        <div class="alert alert-warning alert-dismissible mb-2" role="alert">
-                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                                <span aria-hidden="true">×</span>
-                                                            </button>
-                                                            <p class="mb-0">
-                                                                Your email is not confirmed. Please check your inbox.
-                                                            </p>
-                                                            <a href="javascript: void(0);">Resend confirmation</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
                                                         <div class="form-group">
-                                                            <label for="account-company">Company</label>
-                                                            <input type="text" class="form-control" id="account-company" placeholder="Company name">
+                                                            <label for="account-company">연결 계정</label>
+                                                            <input type="text" class="form-control" id="account-company" placeholder="이름을 검색하세요">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                        <button type="submit" class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Save
-                                                            changes</button>
-                                                        <button type="reset" class="btn btn-light">Cancel</button>
+                                                        <button type="submit" class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">변경내용 저장</button>
+                                                        <button type="reset" class="btn btn-light">취소</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -122,124 +102,30 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <div class="controls">
-                                                                <label for="account-old-password">Old Password</label>
-                                                                <input type="password" class="form-control" id="account-old-password" required placeholder="Old Password" data-validation-required-message="This old password field is required">
+                                                                <label for="account-old-password">기존 비밀번호</label>
+                                                                <input type="password" class="form-control" id="account-old-password" required placeholder="기존 비밀번호를 입력하세요" data-validation-required-message="This old password field is required">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <div class="controls">
-                                                                <label for="account-new-password">New Password</label>
-                                                                <input type="password" name="password" id="account-new-password" class="form-control" placeholder="New Password" required data-validation-required-message="The password field is required" minlength="6">
+                                                                <label for="account-new-password">새 비밀번호</label>
+                                                                <input type="password" name="password" id="account-new-password" class="form-control" placeholder="새로운 비밀번호를 입력하세요" required data-validation-required-message="The password field is required" minlength="6">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <div class="controls">
-                                                                <label for="account-retype-new-password">Retype New
-                                                                    Password</label>
-                                                                <input type="password" name="con-password" class="form-control" required id="account-retype-new-password" data-validation-match-match="password" placeholder="New Password" data-validation-required-message="The Confirm password field is required" minlength="6">
+                                                                <label for="account-retype-new-password">새 비밀번호 재입력</label>
+                                                                <input type="password" name="con-password" class="form-control" required id="account-retype-new-password" data-validation-match-match="password" placeholder="새로운 비밀번호를 다시 입력하세요" data-validation-required-message="The Confirm password field is required" minlength="6">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                        <button type="submit" class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Save
-                                                            changes</button>
-                                                        <button type="reset" class="btn btn-light">Cancel</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="tab-pane fade" id="account-vertical-info" role="tabpanel" aria-labelledby="account-pill-info" aria-expanded="false">
-                                            <form novalidate>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="accountTextarea">Bio</label>
-                                                            <textarea class="form-control" id="accountTextarea" rows="3" placeholder="Your Bio data here..."></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <div class="controls">
-                                                                <label for="account-birth-date">Birth date</label>
-                                                                <input type="text" class="form-control birthdate-picker" required placeholder="Birth date" id="account-birth-date" data-validation-required-message="This birthdate field is required">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="accountSelect">Country</label>
-                                                            <select class="form-control" id="accountSelect">
-                                                                <option>USA</option>
-                                                                <option>India</option>
-                                                                <option>Canada</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="languageselect2">Languages</label>
-                                                            <select class="form-control" id="languageselect2" multiple="multiple">
-                                                                <option value="English" selected>English</option>
-                                                                <option value="Spanish">Spanish</option>
-                                                                <option value="French">French</option>
-                                                                <option value="Russian">Russian</option>
-                                                                <option value="German">German</option>
-                                                                <option value="Arabic" selected>Arabic</option>
-                                                                <option value="Sanskrit">Sanskrit</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <div class="controls">
-                                                                <label for="account-phone">Phone</label>
-                                                                <input type="text" class="form-control" id="account-phone" required placeholder="Phone number" value="(+656) 254 2568" data-validation-required-message="This phone number field is required">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="account-website">Website</label>
-                                                            <input type="text" class="form-control" id="account-website" placeholder="Website address">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="musicselect2">Favourite Music</label>
-                                                            <select class="form-control" id="musicselect2" multiple="multiple">
-                                                                <option value="Rock">Rock</option>
-                                                                <option value="Jazz" selected>Jazz</option>
-                                                                <option value="Disco">Disco</option>
-                                                                <option value="Pop">Pop</option>
-                                                                <option value="Techno">Techno</option>
-                                                                <option value="Folk" selected>Folk</option>
-                                                                <option value="Hip hop">Hip hop</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group">
-                                                            <label for="moviesselect2">Favourite movies</label>
-                                                            <select class="form-control" id="moviesselect2" multiple="multiple">
-                                                                <option value="The Dark Knight" selected>The Dark Knight
-                                                                </option>
-                                                                <option value="Harry Potter" selected>Harry Potter</option>
-                                                                <option value="Airplane!">Airplane!</option>
-                                                                <option value="Perl Harbour">Perl Harbour</option>
-                                                                <option value="Spider Man">Spider Man</option>
-                                                                <option value="Iron Man" selected>Iron Man</option>
-                                                                <option value="Avatar">Avatar</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                        <button type="submit" class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">Save
-                                                            changes</button>
-                                                        <button type="reset" class="btn btn-light">Cancel</button>
+                                                        <button type="submit" class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">변경내용 저장</button>
+                                                        <button type="reset" class="btn btn-light">취소</button>
                                                     </div>
                                                 </div>
                                             </form>

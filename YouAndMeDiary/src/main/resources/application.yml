@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/diary
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+  mvc:
+    static-path-pattern: /static/**
+
+  resources:
+    static-locations: classpath:/static/
+    add-mappings: true
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+
+server:
+  port: 8083
