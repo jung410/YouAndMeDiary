@@ -21,7 +21,7 @@ public class MemberServiceTest {
     @Autowired
     MemberService memberService;
 
-    @Test
+//     @Test
 //     public void 회원가입() throws Exception {
 //         Member member = new Member();
 //         member.setUserId("test1");
