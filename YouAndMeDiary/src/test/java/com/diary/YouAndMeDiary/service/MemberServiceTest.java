@@ -22,15 +22,15 @@ public class MemberServiceTest {
     MemberService memberService;
 
     @Test
-    public void 회원가입() throws Exception {
-        Member member = new Member();
-        member.setUserId("test1");
-        member.setUserName("테스터");
-        member.setUserEmail("test@test.test");
-        member.setUserPassword("123123");
+//     public void 회원가입() throws Exception {
+//         Member member = new Member();
+//         member.setUserId("test1");
+//         member.setUserName("테스터");
+//         member.setUserEmail("test@test.test");
+//         member.setUserPassword("123123");
 
-        Long saveId = memberService.join(member);
+//         Long saveId = memberService.join(member);
 
-        assertEquals(member, memberRepository.findOne(saveId));
-    }
+//         assertEquals(member, memberRepository.findOne(saveId));
+//     }
 }
